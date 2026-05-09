@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Iphone } from "@/src/components/ui/iphone";
 import { cn } from "@/lib/utils";
+import { LuArrowUp } from "react-icons/lu";
 
 type Feature = { label: string; active?: boolean };
 
@@ -219,7 +220,12 @@ function MayaChat() {
                             <span className="text-neutral-400 italic">message maya...</span>
                         )}
                     </span>
-                    <span aria-hidden className="size-6 shrink-0 rounded-full bg-[#EEBACB]"></span>
+                    <span
+                        aria-hidden
+                        className="size-6 shrink-0 rounded-full bg-[#EEBACB] flex justify-center items-center text-neutral-800"
+                    >
+                        <LuArrowUp className="size-3" />
+                    </span>
                 </div>
             </div>
         </div>
