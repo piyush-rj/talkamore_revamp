@@ -112,10 +112,7 @@ function SmallPrintColumn(): JSX.Element {
 function ColumnHeader({ children }: { children: React.ReactNode }): JSX.Element {
     return (
         <span
-            className={cn(
-                "text-[11px] font-medium tracking-[0.28em] uppercase",
-                "text-[#7a6342]"
-            )}
+            className={cn("text-[11px] font-medium tracking-[0.28em] uppercase", "text-[#7a6342]")}
         >
             {children}
         </span>

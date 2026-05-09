@@ -65,7 +65,7 @@ function FaqItem({
             <button
                 type="button"
                 onClick={onToggle}
-                aria-expanded={isOpen}
+                data-expanded={isOpen}
                 className="group flex w-full items-start justify-between gap-8 py-7 text-left transition-colors duration-300 hover:text-neutral-500 sm:py-8"
             >
                 <div className="flex items-start gap-6 sm:gap-10">

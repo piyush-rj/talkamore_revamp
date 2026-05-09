@@ -8,6 +8,7 @@ import LandingHeroSection from "@/src/components/LandingHeroSection";
 import LandingIphoneSection from "@/src/components/LandingIphoneSection";
 import LandingNavbar from "@/src/components/LandingNavbar";
 import LandingVoicesSection from "@/src/components/LandingVoicesSection";
+import LandingCtaSection from "@/src/components/LandingCtaSection";
 
 export default function Home() {
     return (
@@ -27,6 +28,7 @@ export default function Home() {
                     <MemorySection />
                 </div>
                 <LandingFaq />
+                <LandingCtaSection />
             </div>
             <FooterReveal />
         </>
