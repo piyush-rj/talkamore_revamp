@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { DateLabel, MessageBubble } from "./bubble";
+import { DateLabel, grainBackground, MessageBubble } from "./bubble";
 import Reveal from "../Reveal";
 
 export default function MemorySection() {
@@ -21,6 +21,7 @@ export default function MemorySection() {
                                 "p-10 sm:p-12 lg:p-16",
                                 "min-h-105"
                             )}
+                            style={grainBackground}
                         >
                             <DateLabel side="right">oct 14</DateLabel>
                             <MessageBubble side="user">

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { MessageBubble } from "./bubble";
+import { grainBackground, MessageBubble } from "./bubble";
 import Reveal from "../Reveal";
 
 export default function SilenceSection() {
@@ -42,6 +42,7 @@ export default function SilenceSection() {
                                 "p-10 sm:p-12 lg:p-16",
                                 "min-h-105"
                             )}
+                            style={grainBackground}
                         >
                             <MessageBubble side="user">i don’t know what to do.</MessageBubble>
                             <MessageBubble side="maya">hm.</MessageBubble>
