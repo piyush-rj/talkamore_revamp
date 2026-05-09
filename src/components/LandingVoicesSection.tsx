@@ -11,6 +11,7 @@ import {
 import { MeshGradient, Metaballs, Voronoi, Warp } from "@paper-design/shaders-react";
 import { useRef, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import Reveal from "./Reveal";
 
 type Voice = {
     name: string;
@@ -284,73 +285,75 @@ export default function LandingVoicesSection() {
     });
 
     return (
-        <section
-            ref={ref}
-            style={{ height: `${voices.length * 200}vh` }}
-            className="relative bg-white"
-        >
-            <div
-                className={cn(
-                    "sticky top-0 flex h-screen w-full",
-                    "items-center justify-center",
-                    "overflow-hidden bg-white"
-                )}
+        <Reveal>
+            <section
+                ref={ref}
+                style={{ height: `${voices.length * 200}vh` }}
+                className="relative bg-white"
             >
                 <div
                     className={cn(
-                        "pointer-events-none",
-                        "absolute top-20 left-1/2 z-20 -translate-x-1/2",
-                        "text-center",
-                        "sm:top-24"
+                        "sticky top-0 flex h-screen w-full",
+                        "items-center justify-center",
+                        "overflow-hidden bg-white"
                     )}
                 >
-                    <p
+                    <div
                         className={cn(
-                            "text-xs font-medium tracking-[0.25em] uppercase",
-                            "text-neutral-400"
+                            "pointer-events-none",
+                            "absolute top-20 left-1/2 z-20 -translate-x-1/2",
+                            "text-center",
+                            "sm:top-24"
                         )}
                     >
-                        voices
-                    </p>
-                    <h1
-                        className={cn(
-                            "mt-3",
-                            "text-2xl font-light tracking-tight",
-                            "text-neutral-900",
-                            "sm:text-3xl"
-                        )}
-                    >
-                        pick the voice <span className="italic">you need today.</span>
-                    </h1>
-                </div>
+                        <p
+                            className={cn(
+                                "text-xs font-medium tracking-[0.25em] uppercase",
+                                "text-neutral-400"
+                            )}
+                        >
+                            voices
+                        </p>
+                        <h1
+                            className={cn(
+                                "mt-3",
+                                "text-2xl font-light tracking-tight",
+                                "text-neutral-900",
+                                "sm:text-3xl"
+                            )}
+                        >
+                            pick the voice <span className="italic">you need today.</span>
+                        </h1>
+                    </div>
 
-                {voices.map((voice, i) => (
-                    <VoicePanel
-                        key={voice.name}
-                        voice={voice}
-                        index={i}
-                        total={voices.length}
-                        progress={smoothProgress}
-                    />
-                ))}
-
-                <div
-                    className={cn(
-                        "pointer-events-none",
-                        "absolute bottom-10 left-1/2 z-20 -translate-x-1/2",
-                        "flex items-center gap-2"
-                    )}
-                >
-                    {voices.map((_, i) => (
-                        <ProgressDot
-                            key={i}
+                    {voices.map((voice, i) => (
+                        <VoicePanel
+                            key={voice.name}
+                            voice={voice}
                             index={i}
                             total={voices.length}
                             progress={smoothProgress}
                         />
                     ))}
+
+                    <div
+                        className={cn(
+                            "pointer-events-none",
+                            "absolute bottom-10 left-1/2 z-20 -translate-x-1/2",
+                            "flex items-center gap-2"
+                        )}
+                    >
+                        {voices.map((_, i) => (
+                            <ProgressDot
+                                key={i}
+                                index={i}
+                                total={voices.length}
+                                progress={smoothProgress}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Reveal>
     );
 }

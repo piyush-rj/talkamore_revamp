@@ -33,7 +33,6 @@ export default function LandingFooter(): JSX.Element {
                 className={cn(
                     "mx-auto w-full max-w-6xl",
                     "rounded-[2rem] sm:rounded-[2.5rem]",
-                    "bg-[#ece2c8]",
                     "pt-16 pb-10 sm:pt-20 sm:pb-12"
                 )}
             >
@@ -114,7 +113,7 @@ function ColumnHeader({ children }: { children: React.ReactNode }): JSX.Element 
     return (
         <span
             className={cn(
-                "text-[11px] font-medium tracking-[0.28em] uppercase italic",
+                "text-[11px] font-medium tracking-[0.28em] uppercase",
                 "text-[#7a6342]"
             )}
         >

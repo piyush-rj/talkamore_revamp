@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Iphone } from "@/src/components/ui/iphone";
 import { cn } from "@/lib/utils";
 import { LuArrowUp } from "react-icons/lu";
+import Reveal from "./Reveal";
 
 type Feature = { label: string; active?: boolean };
 
@@ -26,42 +27,44 @@ const exchanges: Exchange[] = [
 
 export default function LandingIphoneSection() {
     return (
-        <section className="flex h-screen w-full justify-center bg-white">
-            <div
-                className={cn(
-                    "mx-auto grid max-w-6xl grid-cols-1 items-center",
-                    "gap-16 px-6",
-                    "lg:grid-cols-2 lg:gap-20"
-                )}
-            >
-                <div>
-                    <h2
-                        className={cn(
-                            "text-4xl leading-[1.05] font-semibold tracking-tight",
-                            "text-neutral-900",
-                            "sm:text-5xl lg:text-6xl"
-                        )}
-                    >
-                        your messages pile up. <br />
-                        talkamore listens.
-                    </h2>
+        <Reveal>
+            <section className="flex h-screen w-full justify-center bg-white">
+                <div
+                    className={cn(
+                        "mx-auto grid max-w-6xl grid-cols-1 items-center",
+                        "gap-16 px-6",
+                        "lg:grid-cols-2 lg:gap-20"
+                    )}
+                >
+                    <div>
+                        <h2
+                            className={cn(
+                                "text-4xl leading-[1.05] font-semibold tracking-tight",
+                                "text-neutral-900",
+                                "sm:text-5xl lg:text-6xl"
+                            )}
+                        >
+                            your messages pile up. <br />
+                            talkamore listens.
+                        </h2>
 
-                    <ul className="mt-12 flex flex-col">
-                        {features.map((f) => (
-                            <FeatureItem key={f.label} {...f} />
-                        ))}
-                    </ul>
-                </div>
+                        <ul className="mt-12 flex flex-col">
+                            {features.map((f) => (
+                                <FeatureItem key={f.label} {...f} />
+                            ))}
+                        </ul>
+                    </div>
 
-                <div className="rounded-[2.5rem] bg-[#EEBACB] p-10 lg:p-14">
-                    <div className="dark mx-auto w-full max-w-60">
-                        <Iphone>
-                            <MayaChat />
-                        </Iphone>
+                    <div className="rounded-[2.5rem] bg-[#EEBACB] p-10 lg:p-14">
+                        <div className="dark mx-auto w-full max-w-60">
+                            <Iphone>
+                                <MayaChat />
+                            </Iphone>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Reveal>
     );
 }
 
