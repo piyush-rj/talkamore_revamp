@@ -40,11 +40,11 @@ export default function FooterReveal() {
                 className="w-full"
                 style={{ height: "var(--footer-reveal-height, 0px)" }}
             />
-            <div ref={footer_ref} className="fixed inset-x-0 bottom-0 z-0">
+            <div ref={footer_ref} className="fixed inset-x-0 bottom-0 z-0 bg-[#ece2c8]">
                 <LandingFooter />
                 <motion.div
                     aria-hidden
-                    className="pointer-events-none absolute inset-0 bg-dark-alpha"
+                    className="pointer-events-none absolute inset-0 bg-[#1c1612]"
                     style={{ opacity: overlay_opacity }}
                 />
             </div>

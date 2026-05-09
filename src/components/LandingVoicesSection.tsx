@@ -207,7 +207,6 @@ function VoicePanel({
                     />
                 </div>
 
-<<<<<<< HEAD
                 <h2
                     className={cn(
                         "mt-12",
@@ -216,9 +215,6 @@ function VoicePanel({
                         "sm:text-5xl"
                     )}
                 >
-=======
-                <h2 className="mt-10 text-4xl font-medium tracking-tight text-neutral-900 italic sm:text-5xl">
->>>>>>> 89adab7 (added faq)
                     {voice.name}
                 </h2>
                 <p className="mt-3 text-sm font-light text-neutral-500 sm:text-base">

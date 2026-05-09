@@ -26,7 +26,7 @@ export default function LandingNavbar() {
             className={cn(
                 "fixed top-0 left-1/2 z-30 -translate-x-1/2",
                 "mx-auto h-15 w-full max-w-6xl",
-                "rounded-sm bg-white",
+                "bg-white",
                 "transition-colors duration-200",
                 scrolled && "border-b border-black/10"
             )}
