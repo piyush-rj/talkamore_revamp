@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import AppLogo from "./navbar/AppLogo";
 
 const navLinks = [
     { label: "Memory", href: "#memory" },
@@ -27,13 +28,13 @@ export default function LandingNavbar() {
                 "fixed top-0 left-1/2 z-30 -translate-x-1/2",
                 "mx-auto h-15 w-full max-w-6xl",
                 "bg-white",
-                "transition-colors duration-200",
-                scrolled && "border-b border-black/10"
+                "transition-[height,border-color] duration-300 ease-out will-change-[height]",
+                scrolled ? "border-b border-black/10 h-16" : "border-b border-transparent h-20"
             )}
         >
             <div className="flex h-full w-full items-center justify-between px-6">
                 <Link href="/" className="text-xl font-semibold tracking-tight text-neutral-900">
-                    talkamore
+                    <AppLogo />
                 </Link>
 
                 <div className="flex items-center gap-9">
