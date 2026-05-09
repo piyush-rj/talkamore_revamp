@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { MeshGradient, Metaballs, Voronoi, Warp } from "@paper-design/shaders-react";
 import { useRef, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 type Voice = {
     name: string;
@@ -179,7 +180,12 @@ function VoicePanel({
     return (
         <motion.div
             style={{ x, opacity, scale }}
-            className="absolute inset-0 flex items-center justify-center px-6 pt-28 pb-20 will-change-transform sm:pt-32"
+            className={cn(
+                "absolute inset-0 flex items-center justify-center",
+                "px-6 pt-44 pb-16",
+                "will-change-transform",
+                "sm:pt-52 sm:pb-20"
+            )}
         >
             <div className="flex w-full max-w-xl flex-col items-center text-center">
                 <div className="relative">
@@ -201,20 +207,36 @@ function VoicePanel({
                     />
                 </div>
 
-                <h2 className="mt-10 text-4xl font-light tracking-tight text-neutral-900 italic sm:text-5xl">
+                <h2
+                    className={cn(
+                        "mt-12",
+                        "text-4xl font-light tracking-tight italic",
+                        "text-neutral-900",
+                        "sm:text-5xl"
+                    )}
+                >
                     {voice.name}
                 </h2>
-                <p className="mt-2 text-sm font-light text-neutral-500 sm:text-base">
+                <p className="mt-3 text-sm font-light text-neutral-500 sm:text-base">
                     {voice.tagline}
                 </p>
 
-                <ul className="mt-6 space-y-1.5 text-sm font-light text-neutral-600 sm:text-base">
+                <ul className="mt-8 space-y-1.5 text-sm font-light text-neutral-600 sm:text-base">
                     {voice.bullets.map((b) => (
                         <li key={b}>{b}</li>
                     ))}
                 </ul>
 
-                <p className="mt-6 rounded-full border border-neutral-200/80 bg-white/70 px-5 py-2.5 text-sm font-light text-neutral-700 italic shadow-sm backdrop-blur sm:text-base">
+                <p
+                    className={cn(
+                        "mt-8 px-5 py-2.5",
+                        "rounded-full border border-neutral-200/80",
+                        "bg-white/70 backdrop-blur",
+                        "text-sm font-light text-neutral-700 italic",
+                        "shadow-sm",
+                        "sm:text-base"
+                    )}
+                >
                     {voice.sample}
                 </p>
             </div>
@@ -267,12 +289,37 @@ export default function LandingVoicesSection() {
             style={{ height: `${voices.length * 200}vh` }}
             className="relative bg-white"
         >
-            <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden bg-white">
-                <div className="pointer-events-none absolute top-10 left-1/2 z-20 -translate-x-1/2 text-center sm:top-14">
-                    <p className="text-xs font-medium tracking-[0.25em] text-neutral-400 uppercase">
+            <div
+                className={cn(
+                    "sticky top-0 flex h-screen w-full",
+                    "items-center justify-center",
+                    "overflow-hidden bg-white"
+                )}
+            >
+                <div
+                    className={cn(
+                        "pointer-events-none",
+                        "absolute top-20 left-1/2 z-20 -translate-x-1/2",
+                        "text-center",
+                        "sm:top-24"
+                    )}
+                >
+                    <p
+                        className={cn(
+                            "text-xs font-medium tracking-[0.25em] uppercase",
+                            "text-neutral-400"
+                        )}
+                    >
                         voices
                     </p>
-                    <h1 className="mt-3 text-2xl font-light tracking-tight text-neutral-900 sm:text-3xl">
+                    <h1
+                        className={cn(
+                            "mt-3",
+                            "text-2xl font-light tracking-tight",
+                            "text-neutral-900",
+                            "sm:text-3xl"
+                        )}
+                    >
                         pick the voice <span className="italic">you need today.</span>
                     </h1>
                 </div>
@@ -287,7 +334,13 @@ export default function LandingVoicesSection() {
                     />
                 ))}
 
-                <div className="pointer-events-none absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+                <div
+                    className={cn(
+                        "pointer-events-none",
+                        "absolute bottom-10 left-1/2 z-20 -translate-x-1/2",
+                        "flex items-center gap-2"
+                    )}
+                >
                     {voices.map((_, i) => (
                         <ProgressDot
                             key={i}
