@@ -48,13 +48,15 @@ export default function MemorySection() {
                         </h2>
                         <p
                             className={cn(
-                                "mt-6 max-w-md text-base leading-relaxed",
+                                "mt-10 max-w-md text-base leading-relaxed",
                                 "font-light text-neutral-600 sm:text-lg"
                             )}
                         >
                             the conversation doesn’t reset. six months later she remembers your
                             sister, the meeting that went sideways, the thing you mentioned in
-                            passing.
+                            passing. you stop re-explaining yourself every time you open the tab,
+                            and the small details start adding up to something that actually
+                            knows you.
                         </p>
                     </div>
                 </div>

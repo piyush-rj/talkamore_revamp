@@ -25,12 +25,14 @@ export default function SilenceSection() {
                         </h2>
                         <p
                             className={cn(
-                                "mt-6 max-w-md text-base leading-relaxed",
+                                "mt-10 max-w-md text-base leading-relaxed",
                                 "font-light text-neutral-600 sm:text-lg"
                             )}
                         >
                             sometimes the right reply is none. she sits with you in the quiet and
-                            waits for the part you weren’t ready to say.
+                            waits for the part you weren’t ready to say. no rush to summarize, no
+                            five-paragraph pep talk — just enough room for the next honest sentence
+                            to land on its own.
                         </p>
                     </div>
 

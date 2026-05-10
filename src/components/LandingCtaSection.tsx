@@ -106,7 +106,7 @@ export default function LandingCtaSection() {
                 </div>
             </motion.div>
 
-            <motion.p
+            {/* <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -114,7 +114,7 @@ export default function LandingCtaSection() {
                 className="mx-auto mt-10 max-w-6xl text-center text-sm font-light text-neutral-500 italic"
             >
                 free to start. one-time, no signup.
-            </motion.p>
+            </motion.p> */}
         </section>
     );
 }

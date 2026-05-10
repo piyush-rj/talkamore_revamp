@@ -3,15 +3,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type ComponentType } from "react";
 import {
-    LuShieldCheck,
-    LuBrainCircuit,
-    LuGlobe,
-    LuSparkles,
-    LuHourglass,
-    LuFlame,
-    LuTag,
-    LuTrash2,
-} from "react-icons/lu";
+    PiShieldCheckFill,
+    PiBrainFill,
+    PiGlobeFill,
+    PiSparkleFill,
+    PiHourglassFill,
+    PiFlameFill,
+    PiTagFill,
+    PiTrashFill,
+} from "react-icons/pi";
 import SectionHeader from "./SectionHeader";
 import { cn } from "@/lib/utils";
 
@@ -25,42 +25,42 @@ const faqs: Faq[] = [
     {
         question: "who reads my messages?",
         answer: "nobody. your conversations are stored encrypted at rest (AES-256-GCM, per-user keys) and used only to build your own memory. they're not training data. they're not shared. they're not sold.",
-        Icon: LuShieldCheck,
+        Icon: PiShieldCheckFill,
     },
     {
         question: "do they actually remember everything?",
         answer: "yes. the whole point. mention your sister once, and six months from now the name comes back up on its own.",
-        Icon: LuBrainCircuit,
+        Icon: PiBrainFill,
     },
     {
         question: "do i need to install anything?",
         answer: "no. it runs right here in the browser. no app store, no download, no separate login. open a tab and start.",
-        Icon: LuGlobe,
+        Icon: PiGlobeFill,
     },
     {
         question: "is this just chatgpt with a wrapper?",
         answer: "no. it runs on a large language model under the hood, but the personality, the memory, and the rhythm of the conversation are built from scratch. the voice behaves nothing like chatgpt in practice. no lists, no disclaimers, no “as an ai,” no amnesia. it names patterns from a curated library of psychological frameworks (cognitive distortions, attachment loops, decision fatigue). that's what you can't get from a generic prompt.",
-        Icon: LuSparkles,
+        Icon: PiSparkleFill,
     },
     {
         question: "does it reply instantly, like a bot?",
         answer: "no. it takes a beat. sometimes a long one. you won't get a five-paragraph reply three seconds after you send something raw.",
-        Icon: LuHourglass,
+        Icon: PiHourglassFill,
     },
     {
         question: "is this another locked-down chatgpt?",
         answer: "no. talkamore is built on a model that doesn't flatten your input through guardrails when the topic gets real. the depth is the product.",
-        Icon: LuFlame,
+        Icon: PiFlameFill,
     },
     {
         question: "what does it cost?",
         answer: "one-time payment. free to start. no subscription.",
-        Icon: LuTag,
+        Icon: PiTagFill,
     },
     {
         question: "can i delete everything?",
         answer: "yes, any time. one command and everything is forgotten. no recovery, no support ticket.",
-        Icon: LuTrash2,
+        Icon: PiTrashFill,
     },
 ];
 
@@ -97,7 +97,7 @@ function FaqItem({
                 <div className="flex items-center gap-4 sm:gap-5">
                     <Icon
                         className={cn(
-                            "size-4.5 shrink-0 text-neutral-400",
+                            "size-5 shrink-0 text-neutral-800",
                             "transition-colors duration-300",
                             "group-hover:text-neutral-900"
                         )}
@@ -168,7 +168,7 @@ export default function LandingFaq() {
 
     return (
         <section className="relative bg-white">
-            <div className="mx-auto max-w-5xl px-6 py-32 sm:px-10 sm:py-40">
+            <div className="mx-auto max-w-5xl px-6 py-32 sm:px-10 sm:py-20">
                 <SectionHeader title="questions" description="the things people actually ask." />
 
                 <div className="border-b border-neutral-200/80">
@@ -183,7 +183,7 @@ export default function LandingFaq() {
                     ))}
                 </div>
 
-                <motion.p
+                {/* <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
@@ -195,7 +195,7 @@ export default function LandingFaq() {
                     )}
                 >
                     still wondering something? just open a tab and ask it directly.
-                </motion.p>
+                </motion.p> */}
             </div>
         </section>
     );

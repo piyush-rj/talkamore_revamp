@@ -26,10 +26,10 @@ export default function LandingNavbar() {
         <nav
             className={cn(
                 "fixed top-0 left-1/2 z-30 -translate-x-1/2",
-                "mx-auto h-15 w-full max-w-6xl",
+                "mx-auto w-full max-w-6xl",
                 "bg-white",
                 "transition-[height,border-color] duration-300 ease-out will-change-[height]",
-                scrolled ? "border-b border-black/10 h-16" : "border-b border-transparent h-20"
+                scrolled ? "border-b border-black/10 h-16" : "border-b border-transparent h-16"
             )}
         >
             <div className="flex h-full w-full items-center justify-between px-6">

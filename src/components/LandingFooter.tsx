@@ -4,6 +4,7 @@ import { useState, type JSX } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdArrowOutward, MdContentCopy, MdCheck } from "react-icons/md";
 import { cn } from "../lib/utils";
+import AppLogo from "./navbar/AppLogo";
 
 type FooterLink = { name: string; href: string };
 
@@ -241,14 +242,7 @@ function BottomBar(): JSX.Element {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-start justify-between gap-y-4 sm:flex-row sm:items-end"
         >
-            <span
-                className={cn(
-                    "inline-flex items-baseline gap-x-0.5",
-                    "text-2xl font-medium tracking-tight text-[#2d2316] sm:text-3xl"
-                )}
-            >
-                talkamore<span className="text-[#a3493a]">.</span>
-            </span>
+            <AppLogo className="text-2xl!"/>
             <span className="text-xs font-light tracking-[0.18em] text-[#7a6342]/80">
                 © 2026 talkamore.com
             </span>

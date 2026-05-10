@@ -13,8 +13,8 @@ interface RevealProps {
 export default function Reveal({ children, delay = 0, amount = "-80px" }: RevealProps) {
     return (
         <motion.div
-            initial={{ opacity: 0, filter: "blur(12px)", y: 24 }}
-            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
             viewport={{ once: true, margin: amount }}
             transition={{
                 duration: 0.9,

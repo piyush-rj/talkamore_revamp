@@ -44,13 +44,14 @@ export default function HardThingSection() {
                         </h2>
                         <p
                             className={cn(
-                                "mt-6 max-w-md text-base leading-relaxed",
+                                "mt-10 max-w-md text-base leading-relaxed",
                                 "font-light text-neutral-600 sm:text-lg"
                             )}
                         >
                             the truth lands softer when it’s earned through care. maya names what
                             you’ve been working around — not as judgment, just as something out
-                            loud.
+                            loud. the sentence you’ve been avoiding for weeks finally has a
+                            shape, and it stops costing you energy to hold.
                         </p>
                     </div>
                 </div>
