@@ -55,8 +55,8 @@ export default function MemorySection() {
                             the conversation doesn’t reset. six months later she remembers your
                             sister, the meeting that went sideways, the thing you mentioned in
                             passing. you stop re-explaining yourself every time you open the tab,
-                            and the small details start adding up to something that actually
-                            knows you.
+                            and the small details start adding up to something that actually knows
+                            you.
                         </p>
                     </div>
                 </div>

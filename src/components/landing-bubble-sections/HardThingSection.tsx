@@ -50,8 +50,8 @@ export default function HardThingSection() {
                         >
                             the truth lands softer when it’s earned through care. maya names what
                             you’ve been working around — not as judgment, just as something out
-                            loud. the sentence you’ve been avoiding for weeks finally has a
-                            shape, and it stops costing you energy to hold.
+                            loud. the sentence you’ve been avoiding for weeks finally has a shape,
+                            and it stops costing you energy to hold.
                         </p>
                     </div>
                 </div>

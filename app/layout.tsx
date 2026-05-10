@@ -21,10 +21,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={cn("h-full antialiased font-sans", plusJakartaSans.variable)}
-        >
+        <html lang="en" className={cn("h-full antialiased font-sans", plusJakartaSans.variable)}>
             <body className="min-h-full flex flex-col">
                 <SmoothScroll>{children}</SmoothScroll>
             </body>

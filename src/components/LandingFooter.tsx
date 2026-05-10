@@ -242,7 +242,7 @@ function BottomBar(): JSX.Element {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-start justify-between gap-y-4 sm:flex-row sm:items-end"
         >
-            <AppLogo className="text-2xl!"/>
+            <AppLogo className="text-2xl!" />
             <span className="text-xs font-light tracking-[0.18em] text-[#7a6342]/80">
                 © 2026 talkamore.com
             </span>
